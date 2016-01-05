@@ -1,0 +1,17 @@
+<div ng-include="'views/nav.html'"></div>
+<div class="container">
+    <div class="alert alert-dismissible alert-danger" ng-hide="errorMsg.length===0">
+        <button type="button" class="close" data-dismiss="alert" ng-click="closeErrorMsg()">×</button>
+        {{errorMsg}}
+    </div>
+    <div class="alert alert-dismissible alert-success" ng-hide="successMsg.length===0">
+        <button type="button" class="close" data-dismiss="alert" ng-click="closeSuccessMsg()">×</button>
+        <strong>{{successMsg}}</strong>
+    </div>
+    <div ng-include="'views/claim-status.html'"></div>
+    <div ng-include="'views/claim-survey.html'"></div>
+    <div ng-include="'views/claim-actions.html'"></div>
+    <div ng-include="'views/claim-photos.html'"></div>
+    <div ng-include="'views/dialogs.html'"></div>
+</div>
+<div ng-include="'views/footer.html'"></div>

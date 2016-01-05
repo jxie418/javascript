@@ -1,0 +1,76 @@
+<h2>Claim Status</h2>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="container">
+            <div class="row voffset2">
+                <label class="col-sm-4 control-label">- Claim Number:</label>
+                <div class="col-sm-4">
+                    {{claim.claimNumber}}
+                </div>
+            </div>
+            <div class="row voffset2">
+                <label class="col-sm-4 control-label">- Vehicle Owner:</label>
+                <div class="col-sm-4">
+                    {{claim.vehicleOwnerFirstName}}
+                </div>
+
+            </div>
+            <div class="row voffset2">
+                <label class="col-sm-4 control-label">- Claim Status:</label>
+                <div class="col-sm-4">
+                    {{getClaimStatus(claim)}}
+                </div>
+            </div>
+            <div class="row voffset2">
+                <label for="vehicle_owner_email" class="col-sm-4 control-label">- Email:</label>
+                <div class="col-sm-4">
+                    <input type="text" ng-model="claim.vehicleOwnerEmail" class="form-control" id="vehicle_owner_email" placeholder="Email">
+                </div>
+            </div>
+            <div class="row voffset2">
+                <label for="vehicle_owner_cellphone" class="col-sm-4 control-label">- Cell phone:</label>
+                <div class="col-sm-4">
+                    <input type="text" ng-model="claim.vehicleOwnerCellPhone" class="form-control" id="vehicle_owner_cellphone" placeholder="Cell Phone">
+                </div>
+            </div>
+            <div class="row voffset2">
+                <label class="col-sm-4 control-label">- Passcode:</label>
+                <div class="col-sm-4">
+                    {{claim.userName}}
+                </div>
+            </div>
+            <div class="row voffset2">
+                <label for="select_communication_preference" class="col-sm-4 control-label">- Communication Preference:</label>
+                <div class="col-sm-4">
+                    <select ng-init="comm.value = claim.communicationPreference" class="form-control" id="select_communication_preference"
+                            ng-model="claim.communicationPreference" ng-options="comm.value as comm.name for comm in communications">
+                    </select>
+                </div>
+            </div>
+            <div class="row voffset2">
+                <label class="col-sm-4 control-label">- Estimate Net Total:</label>
+                <div class="col-sm-4">
+                    {{getEstimateNetTotal() | currency}}
+                </div>
+            </div>
+
+            <div class="row voffset2">
+                <button type="reset" class="btn btn-default" ng-click="cancel()">Cancel</button>
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#confirmDialog">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<h2>Upload Estimate Report</h2>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-4">
+                <input class="form-control" type="file" id="estimateReportInput" accept="application/pdf"/>
+            </div>
+            <div class="col-sm-4">
+                <button class="btn btn-primary" id="estimateReportButton" data-toggle="modal" ng-click="openDialog('estimateNetTotalDialog')" >Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

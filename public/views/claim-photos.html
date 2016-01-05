@@ -1,0 +1,13 @@
+<h2 ng-show="submitedImages.length > 0">Submitted Photos</h2>
+<div class="panel panel-default" ng-show="submitedImages.length > 0">
+    <div class="panel-body">
+        <table>
+            <tr  ng-repeat="rows in submitedImages">
+                <td  ng-repeat="image in rows">
+                    <img width="340" hspace="15" ng-click="displayLargePhoto(image.content)" vspace="15" height="256" ng-src="data:image/jpeg;base64,{{image.content}}" ng-show="image.content!=null" ng-hide="image.content==null">
+                    <img width="340" hspace="15" vspace="15" height="256" src="images/spinner.gif" ng-hide="image.content!=null" ng-show="image.content==null">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

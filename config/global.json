@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "MBE Support": {
+            "applicationId": "OHpfVH8YMEZNVDvOlVcmJ8YnV2lULWRImk3J6EaD",
+            "masterKey": "2fYEvkWbfJVTA0T4vQihpPgZTPbbtOjtYW9ldv6W"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.12"
+    }
+}

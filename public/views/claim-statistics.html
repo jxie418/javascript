@@ -1,0 +1,30 @@
+<div class="row sidebar-module">
+    <ul col-md-offset-3 col-md-9 list-group>
+        <li class="list-group-item list-group-item-danger">
+            <strong>
+                <i class="fa fa-calculator"></i>
+                <span>&nbsp;&nbsp;Statistics</span>
+            </strong>
+        </li>
+        <span class="list-group-item">
+            Total claims:
+            <span class="badge">{{totalClaimCount}}</span>
+        </span>
+        <span class="list-group-item">
+             Total Submitted:
+            <span class="badge">{{totalSubmit}}</span>
+        </span>
+        <span class="list-group-item">
+            Submitted:
+            <span class="badge">{{percentageSubmitted}}% </span>
+        </span>
+        <span class="list-group-item" ng-show ="percentageSurveysSubmitted < 100">
+             Surveys Submitted:
+             <span class="badge">{{surveysSubmitted}}</span>
+        </span>
+        <span class="list-group-item" ng-show ="percentageSurveysSubmitted < 100">
+             Submitted Survey:
+             <span class="badge">{{percentageSurveysSubmitted}}% </span>
+        </span>
+    </ul>
+</div>

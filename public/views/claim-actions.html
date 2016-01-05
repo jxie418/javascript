@@ -1,0 +1,10 @@
+<div ng-include="'views/claim-metrics.html'"></div>
+<h2>Available actions for this claim</h2>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="form-group">
+            <button  class="btn btn-primary" ng-click="resendpasscode()">Resend passcode</button>
+            <button  class="btn btn-primary" ng-click="resendestimate()" ng-show="claim.customerStatus>=6">Resend estimate</button>
+        </div>
+    </div>
+</div>

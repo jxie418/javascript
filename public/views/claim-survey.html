@@ -1,0 +1,14 @@
+<h2 ng-show ="surveyDatas.questionsRatings != null">Survey Data</h2>
+<div class="panel panel-default" ng-show ="surveyDatas.questionsRatings != null">
+    <div class="panel-body">
+        <div class="form-group">
+            <label class="control-label">- Was the app easy to use? {{surveyDatas.questionsRatings.q1rating}}</label>
+        </div>
+        <div class="form-group">
+            <label class="control-label">- In the event of another claim, how likely are you to use the app again? {{surveyDatas.questionsRatings.q2rating}}</label>
+        </div>
+        <div class="form-group">
+            <label class="control-label">- How likely are you to recommend it to someone else? {{surveyDatas.questionsRatings.q3rating}}</label>
+        </div>
+    </div>
+</div>
